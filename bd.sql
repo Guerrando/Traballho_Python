@@ -21,14 +21,18 @@ CREATE TABLE IF NOT EXISTS professores (
     FOREIGN KEY (id) REFERENCES usuarios(id) ON DELETE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS secretaria (
+	id INT PRIMARY KEY,
+	cargo VARCHAR(20),
+	FOREIGN KEY (id) REFERENCES usuarios(id) ON DELETE CASCADE
+);
+
 CREATE TABLE IF NOT EXISTS diciplinas (
 	id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     professor_id INT NOT NULL,
     FOREIGN KEY (professor_id) REFERENCES professor(id) ON DELETE RESTRICT
 );
-
-
 
 -- Tabela de notas
 CREATE TABLE IF NOT EXISTS notas (
