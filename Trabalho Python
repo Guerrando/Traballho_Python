@@ -7,5 +7,5 @@ db = pymysql.connect(
     host="localhost",
     user="root",
     password="123456",
-    database="gerenciamento_notas"
+    database="newton_paiva"
 )
